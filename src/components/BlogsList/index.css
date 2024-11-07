@@ -1,0 +1,119 @@
+
+.blog-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+
+  
+.blog-item-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.edit-icon {
+  font-size: 20px;
+}
+
+.edit-button {
+  border-width: 0;
+}
+
+.add-blog {
+  background-color: silver;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+ text-align: center;
+  border: none;
+  border-radius: 4px;
+  margin-left: 14px;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+  width: 90px
+}
+  
+ 
+/* Modal overlay */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Modal content */
+.ReactModal__Content {
+  max-width: 700px;
+  width: 90%;
+  padding: 2rem; 
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  position: relative;
+}
+
+/* Modal title */
+.ReactModal__Content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Form styling */
+.ReactModal__Content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label styling */
+.ReactModal__Content label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Input and textarea styling */
+.ReactModal__Content input[type="text"],
+.ReactModal__Content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.ReactModal__Content textarea {
+  min-height: 100px;
+}
+
+/* Button styling */
+.ReactModal__Content button[type="submit"] {
+  padding: 0.7rem 1.5rem;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.ReactModal__Content button[type="submit"]:hover {
+  background-color: blue;
+}
+
+.ReactModal__Content button[type="button"] {
+  padding: 0.7rem
+}

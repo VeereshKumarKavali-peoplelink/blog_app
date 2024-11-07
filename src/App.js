@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {component} from 'react'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+import LoginForm from './components/LoginForm'
+import SignUpForm from './components/SignUpForm'
+import Header from './components/Header'
+import About from './components/About'
+import Contact from './components/Contact'
+import BlogsList from './components/BlogsList'
+import BlogItemDetails from './components/BlogItemDetails'
+import NotFound from './components/NotFound'
+import ProtectedRoute from './components/ProtectedRoute'
+
+import './App.css'
+
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/login" component={LoginForm} />
+      <Route exact path="/signup" component={SignUpForm} />
+      <ProtectedRoute exact path="/" component={BlogsList} />
+      <ProtectedRoute exact path="/about" component={About} />
+      <ProtectedRoute exact path="/contact" component={Contact} />
+      <ProtectedRoute path="/blogs/:id" component={BlogItemDetails} />
+      <Route path="/not-found" component={NotFound} />
+      <Redirect to="not-found" />
+    </Switch>
+  </BrowserRouter>
+)
+
+export default App
